@@ -1,0 +1,64 @@
+.space{
+  width: 230px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.space img{
+  position: absolute;
+}
+#star{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: stars-rotate 100s linear forwards;
+}
+@keyframes stars-rotate {
+  to{
+    transform: rotate(360deg);
+  }
+}
+#astronuts{
+  top: 40px;
+  right: 10px;
+  width: 40px;
+  animation: astronuts-move 20s forwards;
+}
+@keyframes astronuts-move {
+  to{
+    transform: translate(-300px, -150px) rotate(-360deg);
+  }
+}
+#ship{
+  top: 60px;
+  left: 120px;
+  width: 50px;
+  transform: scale(0);
+  animation: ship-move 15s 3s forwards;
+}
+@keyframes ship-move {
+  25%{
+    transform: scale(.5) translate(-170px, -25px);
+  }
+  50%, 100%{
+    transform: scale(4) translate(250px, 300px);
+  }
+}
+#comet{
+  top: 150px;
+  left: -250px;
+  width: 150px;
+  animation: comet-move 20s 5s forwards;
+}
+@keyframes comet-move {
+  to{
+    transform: translate(500px, -150px);
+    filter: hue-rotate(360deg);
+  }
+}
+#moon{
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 150px;
+}
